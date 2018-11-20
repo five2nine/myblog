@@ -1,0 +1,43 @@
+---
+layout: page
+title: Tags
+permalink: /tags/
+---
+
+<nav role="navigation">
+  <ul id="js-navigation-menu" class="navigation-menu show">
+      {% for tag in site.tags %}
+        {% capture cc %}{{ tag | first }}{% endcapture %}
+        <!-- <li class="nav-link" style="display:inline-block; border: 1px solid #ccc; border-radius:8px 8px 8px 8px; padding: 0 1em 0 1em">
+          <a href="{{ site.baseurl }}/tag/{{ cc }}">{{cc}}</a>
+        </li> -->
+        <li class="nav-link" style="display:inline-block; border: 1px solid #ccc; border-radius:8px 8px 8px 8px; padding: 0 1em 0 1em">
+          <a href="{{ cc | prepend: '/tag/' | prepend: site.baseurl }}">{{cc}}</a>
+        </li>
+      {% endfor %} 
+    </ul>
+</nav>
+<br>
+
+{% for tag in site.tags %}
+  {% capture cc %}{{ tag | first }}{% endcapture %}
+  <h2 id="{{cc}}">{{ cc | capitalize }}</h2>
+  {% for desc in site.descriptions %}
+    {% if desc.cc == cc %}
+      <p class="desc"><em>{{ desc.desc }}</em></p>
+    {% endif %}
+  {% endfor %}
+  <ul class="posts-list">
+  {% for post in site.tags[cc] %}
+    <li>
+      <strong>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </strong>
+      <span class="post-date">- {{ post.date | date_to_long_string }}</span>
+    </li>
+  {% endfor %}
+  </ul>
+  {% if forloop.last == false %}<hr>{% endif %}
+{% endfor %}
+<br>
+

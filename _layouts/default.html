@@ -1,5 +1,8 @@
+---
+layout: compress
+---
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 
   {% include head.html %}
 
@@ -7,9 +10,46 @@
 
     {% include header.html %}
 
-    <div class="page-content">
-        {{ content }}
-    </div>
+    <body class="sidebar-overlay">
+      <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+           content to avoid any CSS collisions with our real content. -->
+      <div class="wrap">
+
+        <div class="masthead">
+          <div class="container">
+            <h3 class="masthead-title">
+              <!-- 상단 홈링크 -->
+              <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+              <small>{{ site.tagline }}</small>
+            </h3>
+          </div>
+        </div>
+        <div class="page-content">
+          {{ content }}
+        </div>
+      </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+          console.log(1,checkbox.checked)
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+console.log(2,checkbox.checked)
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
 
     {% include footer.html %}
 

@@ -15,6 +15,10 @@
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/{{ site.highlightjs_theme }}.min.css">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
 
+  <!-- 웹 폰트 설정 -->
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css"> -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet"> -->
+
   <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
   <link rel="shortcut icon" href="{{ "/assets/icons/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon">
   <link rel="icon" href="{{ "/assets/icons/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon">
@@ -67,7 +71,20 @@
   {% endif %}
 
   <!-- Site styles -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/poole.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+  {% include mathjax_support.html %}
+
+  {% include sidebar.html %}
+
+  <!-- mermaid support ['default', 'forest', 'dark', 'neutral'] --> 
+  <script src="https://unpkg.com/mermaid@8.0.0-rc.8/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({startOnLoad: true, theme: 'default'});</script>
+
 </head>

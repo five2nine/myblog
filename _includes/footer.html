@@ -4,7 +4,7 @@
 
     <h3 class="footer-heading">{{ site.title }}</h3>
 
-    <div class="site-navigation">
+    <!-- <div class="site-navigation">
 
       <p><strong>Site Map</strong></p>
       <ul class="pages">
@@ -12,6 +12,21 @@
         {% if page.title and page.main_nav != false %}
           <li class="nav-link"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
         {% endif %}
+        {% endfor %}
+      </ul>
+    </div> -->
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+        <a class="nav-link" href="{{ site.baseurl }}/">Home</a>
+        {% for node in pages_list %}
+        {% if node.title != null %}
+        {% if node.layout == "page" %}
+        <li><a class="nav-link" href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a></li>
+        {% endif %}
+        {% endif %}        
         {% endfor %}
       </ul>
     </div>
