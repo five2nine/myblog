@@ -164,7 +164,7 @@ git init
 git add .
 git status
 git commit -m "initial"
-git remote add origin https://github.com/five2nine/gblog
+git remote add git https://github.com/five2nine/gblog
 git remote -v
 git push --force origin master
 

@@ -19,8 +19,10 @@ description: >
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
-baseurl: "/blog" # the subpath of your site, e.g. /blog/
-url: "http://127.0.0.1:4000" # the base hostname & protocol for your site
+baseurl: "/myblog" # the subpath of your site, e.g. /blog/
+# url: "http://127.0.0.1:4000" # the base hostname & protocol for your site
+# url: "https://github.com/five2nine/myblog" # the base hostname & protocol for your site
+url: "https://five2nine.github.io" # the base hostname & protocol for your site
 cover: "/assets/header_image.jpg"
 logo: "/assets/logo.png"
 
