@@ -57,3 +57,6 @@ GPGGA 신호는 다른 6종의 메시지보다 시간대에 따라 입력주기 
 00:24:50.00	35.222087	129.007900	DGPS fix	17	0.66	45.90	25.20	0.00	0
 00:24:51.00	35.222087	129.007900	DGPS fix	16	0.68	45.90	25.20	0.00	0
 ```
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NsGGpgrs6JI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
