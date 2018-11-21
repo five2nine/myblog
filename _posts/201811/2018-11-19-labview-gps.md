@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 랩뷰 실시간 GPS 정보
-date: 2018-11-19
+date: 2018-11-19 20:40:00 +0900
 author: 원성규
 excerpt: 랩뷰에서 실시간으로 GPS 정보를 출력하기 위한 방안을 조합하고 있다.
 categories:
