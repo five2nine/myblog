@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 랩뷰 통신 문제
-date: 2018-11-18 18:40:00 +0900
+date: 2018-11-22 18:40:00 +0900
 author: 원성규
 excerpt: 
 categories:
